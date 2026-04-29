@@ -13,7 +13,8 @@ public class MyStack
         if (queue1.Count == 0)
         {
             queue1.Enqueue(x);
-            for (int i = 0; i < queue2.Count; i++)
+            int temp = queue2.Count;
+            for (int i = 0; i < temp; i++)
             {
                 queue1.Enqueue(queue2.Dequeue());
             }
@@ -22,7 +23,8 @@ public class MyStack
         if (queue2.Count == 0)
         {
             queue2.Enqueue(x);
-            for (int i = 0; i < queue1.Count; i++)
+            int temp = queue1.Count;
+            for (int i = 0; i < temp; i++)
             {
                 queue2.Enqueue(queue1.Dequeue());
             }
